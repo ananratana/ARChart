@@ -63,7 +63,7 @@ extension ARChartPickerView {
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         if items.count > 0, row < items.count {
             let item = items[row]
-            let cv = UIView(frame: CGRect(x: 0, y: 0, width: pickerView.frame.height, height: 0))
+            let cv = UIView(frame: CGRect(x: 0, y: 0, width: pickerView.frame.height, height: rowHeight))
             cv.clipsToBounds = true
             //Date label
             let x = (rowHeight - 20)/2

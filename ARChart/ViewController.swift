@@ -40,7 +40,6 @@ class ViewController: UIViewController {
         pickerView.items = items
         pickerView.onChartSelected = { (item) in
             self.labelDate.text = item.date
-            self.labelDate.text = item.date
             self.labelBooks.textAnimateCounter("\(item.books)", duration: 0.3)
             self.labelPages.textAnimateCounter("\(item.pages)", duration: 0.3)
             self.labelHours.textAnimateCounter("\(item.hours)", duration: 0.3)
