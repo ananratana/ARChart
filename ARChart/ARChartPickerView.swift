@@ -26,7 +26,6 @@ class ARChartPickerView: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
         didSet {
             maxValue = items.map({$0.toSeconds()}).max() ?? 1
             setupPickerView()
-            pickerView.reloadAllComponents()
         }
     }
     //call back closure
@@ -62,7 +61,7 @@ extension ARChartPickerView {
         return rowHeight
     }
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        if items.count > 0, row <= items.count {
+        if items.count > 0, row < items.count {
             let item = items[row]
             let cv = UIView(frame: CGRect(x: 0, y: 0, width: pickerView.frame.height, height: 0))
             cv.clipsToBounds = true
