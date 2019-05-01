@@ -50,16 +50,20 @@ extension ARChartPickerView {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return items.count
     }
+    
     func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         return pickerView.frame.height
     }
+    
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         rowHeight = 35
         return rowHeight
     }
+    
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         if items.count > 0, row < items.count {
             let item = items[row]
@@ -92,6 +96,7 @@ extension ARChartPickerView {
         }
         return UIView()
     }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if let onSelected = onChartSelected, items.count > row {
             onSelected(items[row])
@@ -153,7 +158,6 @@ class PickerViewX: UIPickerView {
             }
             n += (is15MinuteMark ? 5 : 1)
         }
-        
     }
     
     override func didAddSubview(_ subview: UIView) {

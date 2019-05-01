@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         textViewInfo.attributedText = NSAttributedString(string: "⏱ ข้อมูลจาก NOP World Culture Score Index ระบุว่า ชาวอินเดียให้เวลากับการอ่านมากที่สุดในโลก 10.42 ชั่วโมงต่อคนต่อสัปดาห์ รองลงมาคือไทย 9.24 ชั่วโมง ตามด้วยจีน 8 ชั่วโมง ฟิลิปปินส์ 7.36 ชั่วโมง อียิปต์ 7.30 ชั่วโมง สาธารณรัฐเช็ก 7.24 ชั่วโมง รัสเซีย 7.06 ชั่วโมง ฝรั่งเศสและสวีเดนเท่ากันที่ 6.54 ชั่วโมง และซาอุดีอาระเบีย 6.48 ชั่วโมง", attributes: att)
         
     }
-
+  
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let items = ReadData.samples()
