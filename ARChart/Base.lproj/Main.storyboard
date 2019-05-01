@@ -1,24 +1,291 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AjJ-SA-PTs">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SukhumvitSet.ttc">
+            <string>SukhumvitSet-Thin</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--ประวัติ-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ARChart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book2" translatesAutoresizingMaskIntoConstraints="NO" id="Sd6-WY-38j">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqu-VC-BWS">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aPB-1n-FqA">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aeH-fU-jfI">
+                                <rect key="frame" x="0.0" y="88" width="414" height="754"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2N-7N-B6e">
+                                        <rect key="frame" x="171" y="0.0" width="72.5" height="50.5"/>
+                                        <fontDescription key="fontDescription" name="SukhumvitSet-Thin" family="Sukhumvit Set" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" alignment="firstBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="rL4-XR-zUE">
+                                        <rect key="frame" x="167.5" y="58.5" width="79.5" height="39"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUE-ma-keW">
+                                                <rect key="frame" x="0.0" y="7.5" width="61.5" height="31.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เล่ม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XV-3b-IXn">
+                                                <rect key="frame" x="61.5" y="18" width="18" height="21"/>
+                                                <fontDescription key="fontDescription" name="SukhumvitSet-Thin" family="Sukhumvit Set" pointSize="13"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" alignment="firstBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="Vi3-aL-trD">
+                                        <rect key="frame" x="166" y="105.5" width="82.5" height="31.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XJ-Z5-M64">
+                                                <rect key="frame" x="0.0" y="0.0" width="61.5" height="31.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="หน้า" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2a-s5-BNl">
+                                                <rect key="frame" x="61.5" y="10.5" width="21" height="21"/>
+                                                <fontDescription key="fontDescription" name="SukhumvitSet-Thin" family="Sukhumvit Set" pointSize="13"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" alignment="firstBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="ERq-rH-WQC">
+                                        <rect key="frame" x="81" y="145" width="252" height="31.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3L-no-tz6">
+                                                <rect key="frame" x="0.0" y="0.0" width="61.5" height="31.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ชม." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQd-Wd-sqa">
+                                                <rect key="frame" x="61.5" y="10.5" width="18" height="21"/>
+                                                <fontDescription key="fontDescription" name="SukhumvitSet-Thin" family="Sukhumvit Set" pointSize="13"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fws-Xk-TM7">
+                                                <rect key="frame" x="79.5" y="0.0" width="61.5" height="31.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="นาที" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86P-ms-dtT">
+                                                <rect key="frame" x="141" y="10.5" width="21.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="SukhumvitSet-Thin" family="Sukhumvit Set" pointSize="13"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tr0-M4-W1f">
+                                                <rect key="frame" x="162.5" y="0.0" width="61.5" height="31.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="วินาที" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmg-Ws-4ei">
+                                                <rect key="frame" x="224" y="10.5" width="28" height="21"/>
+                                                <fontDescription key="fontDescription" name="SukhumvitSet-Thin" family="Sukhumvit Set" pointSize="13"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line-1" translatesAutoresizingMaskIntoConstraints="NO" id="UYt-iC-Pmm">
+                                        <rect key="frame" x="0.0" y="184.5" width="414" height="20"/>
+                                        <color key="tintColor" white="1" alpha="0.89861943493150698" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="esK-ok-c9x"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2m-DG-7d4" customClass="ARChartPickerView" customModule="ARChart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="212.5" width="414" height="334.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a70-aJ-k6k">
+                                        <rect key="frame" x="0.0" y="555" width="414" height="0.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.5" id="3F6-9k-6gw"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Myx-HK-hya">
+                                        <rect key="frame" x="8" y="563.5" width="398" height="51"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xi3-ad-bVI">
+                                                <rect key="frame" x="0.0" y="0.0" width="195" height="51"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เวลาอ่านสะสม" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyL-iR-LJj">
+                                                        <rect key="frame" x="55" y="0.0" width="85.5" height="25.5"/>
+                                                        <fontDescription key="fontDescription" name="SukhumvitSet-Thin" family="Sukhumvit Set" pointSize="16"/>
+                                                        <color key="textColor" white="0.70112728310000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" alignment="firstBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="UGi-1l-dAi">
+                                                        <rect key="frame" x="82.5" y="25.5" width="30.5" height="25.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9T-b1-5mt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="12.5" height="24"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ชม." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1G-mQ-BSh">
+                                                                <rect key="frame" x="12.5" y="4.5" width="18" height="21"/>
+                                                                <fontDescription key="fontDescription" name="SukhumvitSet-Thin" family="Sukhumvit Set" pointSize="13"/>
+                                                                <color key="textColor" white="0.70112728310000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vmL-tx-pLr">
+                                                <rect key="frame" x="203" y="0.0" width="195" height="51"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ค่าเฉลี่ยการอ่าน" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZC-oF-QOI">
+                                                        <rect key="frame" x="48.5" y="0.0" width="98.5" height="25.5"/>
+                                                        <fontDescription key="fontDescription" name="SukhumvitSet-Thin" family="Sukhumvit Set" pointSize="16"/>
+                                                        <color key="textColor" white="0.70112728310000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" alignment="firstBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="mWr-B2-cu7">
+                                                        <rect key="frame" x="62" y="25.5" width="71" height="25.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fm6-OT-I17">
+                                                                <rect key="frame" x="0.0" y="0.0" width="12.5" height="24"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ชม./สัปดาห์" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBp-HE-HLM">
+                                                                <rect key="frame" x="12.5" y="4.5" width="58.5" height="21"/>
+                                                                <fontDescription key="fontDescription" name="SukhumvitSet-Thin" family="Sukhumvit Set" pointSize="13"/>
+                                                                <color key="textColor" white="0.70112728310000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Juc-h8-6Yh">
+                                        <rect key="frame" x="0.0" y="622.5" width="414" height="12"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="aH8-MI-BBf"/>
+                                        </constraints>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoC-E4-pGG">
+                                        <rect key="frame" x="8" y="642.5" width="398" height="111.5"/>
+                                        <color key="backgroundColor" white="1" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">ข้อมูลจาก NOP World Under Score Index ระบุว่า ชาวอินเดียให้เวลากับการอ่านมากที่สุดในโลก 10.42 ชั่วโมงต่อคนต่อสัปดาห์ รองลงมาคือไทย 9.24 ชั่วโมง ตามด้วยจีน 8 ชั่วโมง ฟิลิปปินส์ 7.36 ชั่วโมง อียิปต์ 7.30 ชั่วโมง สาธารณรัฐเช็ก 7.24 ชั่วโมง รัสเซีย 7.06 ชั่วโมง ฝรั่งเศสและสวีเดนเท่ากันที่ 6.54 ชั่วโมง และซาอุดีอาระเบีย 6.48 ชั่วโมง</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Myx-HK-hya" secondAttribute="trailing" constant="8" id="013-zq-vAJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="m2m-DG-7d4" secondAttribute="trailing" id="6dq-F5-Dtl"/>
+                                    <constraint firstAttribute="trailing" secondItem="Juc-h8-6Yh" secondAttribute="trailing" id="CgP-bb-D7e"/>
+                                    <constraint firstItem="Myx-HK-hya" firstAttribute="leading" secondItem="aeH-fU-jfI" secondAttribute="leading" constant="8" id="Ex1-WV-QiW"/>
+                                    <constraint firstItem="CoC-E4-pGG" firstAttribute="height" secondItem="m2m-DG-7d4" secondAttribute="height" multiplier="1/3" id="EzH-kb-chU"/>
+                                    <constraint firstAttribute="trailing" secondItem="UYt-iC-Pmm" secondAttribute="trailing" id="IKj-6W-Vhf"/>
+                                    <constraint firstItem="Juc-h8-6Yh" firstAttribute="leading" secondItem="aeH-fU-jfI" secondAttribute="leading" id="KF2-mS-yno"/>
+                                    <constraint firstAttribute="trailing" secondItem="CoC-E4-pGG" secondAttribute="trailing" constant="8" id="S7z-DQ-Dhe"/>
+                                    <constraint firstItem="UYt-iC-Pmm" firstAttribute="leading" secondItem="aeH-fU-jfI" secondAttribute="leading" id="XMi-dA-YZL"/>
+                                    <constraint firstItem="m2m-DG-7d4" firstAttribute="leading" secondItem="aeH-fU-jfI" secondAttribute="leading" id="kbD-QP-QUm"/>
+                                    <constraint firstItem="CoC-E4-pGG" firstAttribute="leading" secondItem="aeH-fU-jfI" secondAttribute="leading" constant="8" id="wwd-lY-som"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aeH-fU-jfI" secondAttribute="bottom" constant="20" id="4TU-QQ-caA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sd6-WY-38j" secondAttribute="trailing" id="DnD-pd-cO9"/>
+                            <constraint firstItem="hqu-VC-BWS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="FVQ-MF-d2i"/>
+                            <constraint firstItem="Sd6-WY-38j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R5b-dn-pwH"/>
+                            <constraint firstItem="aeH-fU-jfI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eb3-7H-il4"/>
+                            <constraint firstItem="hqu-VC-BWS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i85-uD-JQe"/>
+                            <constraint firstItem="aeH-fU-jfI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="igd-45-goK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hqu-VC-BWS" secondAttribute="trailing" id="kqV-fq-UQc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aeH-fU-jfI" secondAttribute="trailing" id="oPN-0J-zv9"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="hqu-VC-BWS" secondAttribute="bottom" id="tjb-bc-1Jv"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Sd6-WY-38j" secondAttribute="bottom" id="yGa-Xh-hY1"/>
+                            <constraint firstItem="Sd6-WY-38j" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="yvq-tY-kl6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="ประวัติ" id="PcG-Ph-1kK"/>
+                    <connections>
+                        <outlet property="labelAverage" destination="Fm6-OT-I17" id="uFa-Ph-Hwa"/>
+                        <outlet property="labelBooks" destination="qUE-ma-keW" id="yX6-Cd-9qm"/>
+                        <outlet property="labelDate" destination="Z2N-7N-B6e" id="F14-mE-9tb"/>
+                        <outlet property="labelHours" destination="A3L-no-tz6" id="d1s-aD-pRk"/>
+                        <outlet property="labelMinutes" destination="fws-Xk-TM7" id="Trw-dw-m54"/>
+                        <outlet property="labelPages" destination="4XJ-Z5-M64" id="U0M-fy-Tc3"/>
+                        <outlet property="labelSeconds" destination="Tr0-M4-W1f" id="4Ag-tP-IQh"/>
+                        <outlet property="labelSum" destination="J9T-b1-5mt" id="Df7-cw-zdk"/>
+                        <outlet property="pickerView" destination="m2m-DG-7d4" id="EaO-pg-fOx"/>
+                        <outlet property="textViewInfo" destination="CoC-E4-pGG" id="xy3-1F-XgB"/>
+                        <outlet property="vsEffect" destination="hqu-VC-BWS" id="Re7-kh-52x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="871" y="-656"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yUS-3o-KZu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AjJ-SA-PTs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="vht-ag-aqn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Mod-3z-73n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t3H-0H-pHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="-655.58035714285711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book2" width="4016" height="6016"/>
+        <image name="line-1" width="512" height="20"/>
+    </resources>
 </document>
