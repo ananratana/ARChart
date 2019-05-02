@@ -20,7 +20,7 @@ class ARChartPickerView: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
         pv.delegate = self
         return pv
     }()
-    var rowHeight:CGFloat = 0
+    let rowHeight:CGFloat = 35
     var maxValue: CGFloat = 0
     var items: [ReadPlotData] = [] {
         didSet {
@@ -35,10 +35,15 @@ class ARChartPickerView: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
         if self.subviews.count == 0 {
             addSubview(pickerView)
             let rect = self.frame
+            //1. set pickerView.height = view.width, pickerView.width = view.height
+            //2. increase pickerView width to make bar chart looks more flat
+            //3. move pickerView to center view
+            //4. rotate counterclockwise
+            let w = UIDevice.current.userInterfaceIdiom == .phone ?  rect.width*0.75 : rect.width
+            pickerView.frame = CGRect(x: 0, y: 0, width: rect.height, height: rect.width + w)
+            pickerView.center = self.superview!.convert(self.center, to: self)
             pickerView.transform = CGAffineTransform(rotationAngle: -90*(.pi/180))
             pickerView.reloadAllComponents()
-            let w = UIDevice.current.userInterfaceIdiom == .phone ?  self.frame.width*0.75 : self.frame.width
-            pickerView.frame = CGRect(x: -w/2, y: 0, width: rect.width + w, height: rect.height)
             //set hourScale
             pickerView.hourScale = (0.75*(pickerView.frame.height - 20))*3600/maxValue
         }
@@ -60,7 +65,6 @@ extension ARChartPickerView {
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        rowHeight = 35
         return rowHeight
     }
     
@@ -112,7 +116,6 @@ extension ARChartPickerView {
             self.pickerView.selectRow(row, inComponent: inComponet, animated: false)
             self.pickerView(self.pickerView, didSelectRow: row, inComponent: inComponet)
         }
-        
     }
 }
 
