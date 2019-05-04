@@ -433,7 +433,6 @@ extension CGPoint {
     func scaleBy(x:CGFloat, y:CGFloat) -> CGPoint {
         return CGPoint(x: self.x * x, y: self.y * y)
     }
-    
 }
 
 extension SCNVector3 {
