@@ -18,7 +18,6 @@ struct ReadPlotData {
     let hours: Int
     let minutes: Int
     let seconds: Int
-    //Test Pull request
     func toSeconds() -> CGFloat {
         return CGFloat(hours*3600 + minutes*60 + seconds)
         
