@@ -25,12 +25,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book2" translatesAutoresizingMaskIntoConstraints="NO" id="Sd6-WY-38j">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqu-VC-BWS">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aPB-1n-FqA">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="dark"/>
@@ -229,10 +229,11 @@
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aeH-fU-jfI" secondAttribute="bottom" constant="20" id="4TU-QQ-caA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sd6-WY-38j" secondAttribute="trailing" id="DnD-pd-cO9"/>
-                            <constraint firstItem="hqu-VC-BWS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="FVQ-MF-d2i"/>
+                            <constraint firstItem="hqu-VC-BWS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FVQ-MF-d2i"/>
                             <constraint firstItem="Sd6-WY-38j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R5b-dn-pwH"/>
                             <constraint firstItem="aeH-fU-jfI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eb3-7H-il4"/>
                             <constraint firstItem="hqu-VC-BWS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i85-uD-JQe"/>
@@ -241,7 +242,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aeH-fU-jfI" secondAttribute="trailing" id="oPN-0J-zv9"/>
                             <constraint firstAttribute="bottomMargin" secondItem="hqu-VC-BWS" secondAttribute="bottom" id="tjb-bc-1Jv"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Sd6-WY-38j" secondAttribute="bottom" id="yGa-Xh-hY1"/>
-                            <constraint firstItem="Sd6-WY-38j" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="yvq-tY-kl6"/>
+                            <constraint firstItem="Sd6-WY-38j" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yvq-tY-kl6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -269,10 +270,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AjJ-SA-PTs" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="vht-ag-aqn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

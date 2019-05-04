@@ -26,13 +26,14 @@ public protocol ThemeProtocol {
 }
 extension ThemeProtocol {
     public func applyTheme(vc: UIViewController) {
+        //Statusbar
+        vc.navigationController?.navigationBar.barStyle = self is LightTheme ? .default : .black
+        
         let barTitleFont = UIFont(name: mainFontName, size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .light)
         let barItemFont = UIFont(name: mainFontName, size: 15) ?? UIFont.systemFont(ofSize: 15, weight: .light)
 
         let att = [NSAttributedString.Key.font: barItemFont, NSAttributedString.Key.foregroundColor: UIColor.white]
         let titleTextAttributes = [NSAttributedString.Key.font: barTitleFont, NSAttributedString.Key.foregroundColor: barTitleTint]
-        vc.navigationController?.navigationBar.shadowImage = UIImage()
-        vc.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         vc.navigationController?.navigationBar.backgroundColor = .clear
         vc.navigationController?.navigationBar.barTintColor = barBackground
         vc.navigationController?.navigationBar.titleTextAttributes = titleTextAttributes
@@ -40,10 +41,8 @@ extension ThemeProtocol {
         vc.navigationController?.navigationItem.rightBarButtonItem?.setTitleTextAttributes(att, for: .normal)
         vc.navigationController?.navigationItem.leftBarButtonItem?.setTitleTextAttributes(att, for: .normal)
         vc.navigationController?.navigationBar.tintColor = barTitleTint
-        vc.navigationController?.navigationBar.isTranslucent = self is TransparentTheme
 
-        //Statusbar
-        vc.navigationController?.navigationBar.barStyle = self is LightTheme ? .default : .black
+        vc.navigationController?.navigationBar.isTransperent = (self is TransparentTheme)
     }
 }
 
@@ -88,3 +87,5 @@ class LightTheme: ThemeProtocol {
     init() {}
     
 }
+
+

@@ -33,6 +33,7 @@ class ARChartPickerView: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
     
     fileprivate func setupPickerView() {
         if self.subviews.count == 0 {
+            self.backgroundColor = .clear
             addSubview(pickerView)
             let rect = self.frame
             //1. set pickerView.height = view.width, pickerView.width = view.height
@@ -43,11 +44,10 @@ class ARChartPickerView: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
             pickerView.frame = CGRect(x: 0, y: 0, width: rect.height, height: rect.width + w)
             pickerView.center = self.superview!.convert(self.center, to: self)
             pickerView.transform = CGAffineTransform(rotationAngle: -90*(.pi/180))
-            pickerView.reloadAllComponents()
             //set hourScale
             pickerView.hourScale = (0.75*(pickerView.frame.height - 20))*3600/maxValue
         }
-        self.backgroundColor = .clear
+        pickerView.reloadAllComponents()
     }
 }
 
@@ -75,7 +75,7 @@ extension ARChartPickerView {
             cv.clipsToBounds = true
             //Date label
             let x = (rowHeight - 20)/2
-            let lblDate = UILabel(frame: CGRect(x: -x, y: x, width: 20 + 2*x, height: 20))
+            let lblDate = UILabel(frame: CGRect(x: -x, y: x, width: rowHeight, height: 20))
             lblDate.textColor = UIColor.white.withAlphaComponent(0.9)
             lblDate.text = item.ddmm
             lblDate.font = UIFont.systemFont(ofSize: 11, weight: .thin)
@@ -86,13 +86,11 @@ extension ARChartPickerView {
             //chart
             let w = (0.75*(cv.frame.width - 20))*item.toSeconds()/maxValue
             let h = 0.25*rowHeight
-            let lbl = UILabel()
-            lbl.backgroundColor = colors[item.day]
+            let lblChart = UILabel(frame: CGRect(x: 20, y: h, width: w, height: 20))
+            lblChart.backgroundColor = colors[item.day]
             
-            cv.addSubview(lbl)
+            cv.addSubview(lblChart)
             cv.addSubview(lblDate)
-            cv.addConstraintsWithFormat(format: "H:|-20-[v0(\(w))]", views: lbl)
-            cv.addConstraintsWithFormat(format: "V:|-\(h)-[v0]-\(h)-|", views: lbl)
             
             lblDate.transform = CGAffineTransform(rotationAngle: 90*(.pi/180))
             
@@ -140,16 +138,16 @@ class PickerViewX: UIPickerView {
         
         while CGFloat(n)*hourScale/60.0 < frame.height {
             if n % interval == 0 {
-                context.setLineWidth(1.5)
+                context.setLineWidth(1.5) //major scale
             } else {
-                context.setLineWidth(0.5)
+                context.setLineWidth(0.5) //minor scale
             }
             let w = CGFloat(n)*hourScale/60.0
             let p1 = CGPoint(x: w, y: -13)
             let p2 = CGPoint(x: w, y: 13)
             context.addLines(between: [p1, p2])
             context.drawPath(using: .stroke)
-            
+            //draw major scale label
             if n % interval == 0 {
                 let size = ("\(n)" as NSString).size(withAttributes: att)
                 let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)

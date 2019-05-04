@@ -487,3 +487,21 @@ extension UICollectionReusableView {
     }
 }
 
+extension UINavigationBar {
+    var isTransperent: Bool {
+        get {
+            return false // Just to satisfy property
+        }
+        set {
+            if newValue == true {
+                self.shadowImage   = UIImage()
+                self.isTranslucent = true
+                self.setBackgroundImage(UIImage(), for: .default)
+            }else{
+                self.shadowImage   = UIImage()
+                self.isTranslucent = false
+                self.setBackgroundImage(nil, for: .default)
+            }
+        }
+    }
+}
