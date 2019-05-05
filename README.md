@@ -8,3 +8,5 @@ to show the daily activities of the users as bar chart.
 Have a look at mp4 file to see what it looks like.
 
 
+![](ARChart/Images/ScreenShot1.png)
+
