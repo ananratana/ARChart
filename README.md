@@ -6,3 +6,5 @@ This customize UIPickerView can be used in many apps like fitness, reading or me
 to show the daily activities of the users as bar chart.
 
 Have a look at mp4 file to see what it looks like.
+
+
